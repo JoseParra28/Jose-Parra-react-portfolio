@@ -4,6 +4,7 @@ html {
   margin: 0;
   padding: 0;
   background-color: #6b6969;
+  
 }
 canvas {
   height: 100vh;
@@ -11,6 +12,11 @@ canvas {
   margin: 0;
   padding: 0;
   touch-action: none;
+
+}
+iframe {
+  position: relative;
+  z-index: 2;
 }
 @media screen and (max-width:950px){
 canvas{

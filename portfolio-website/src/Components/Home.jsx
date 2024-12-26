@@ -2,10 +2,15 @@ import { Canvas, useFrame } from "@react-three/fiber"
 import { useRef, useState } from "react"
 import {Html, ContactShadows, Environment, Float, PresentationControls,  useGLTF } from "@react-three/drei"
 
+
+
+
+
 const Landing = () => {
 
     const computer = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf')
-    const mug = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/cup/model.gltf')
+    const bookShelf = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/bookcase-wide/model.gltf')
+    const phone = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/iphone-x/model.gltf')
     
     return (
         <Canvas>
@@ -13,18 +18,27 @@ const Landing = () => {
             <color args={['#6b6969']} attach="background"/>
             
          <mesh>
+
+            <primitive
+            object={phone.scene}
+            >
+                
+            </primitive>
            
-            {/* <torusGeometry />
-            <meshBasicMaterial color={"green"}/> */}
-
+                <PresentationControls>
+                <Float>
                 <primitive 
-                object={mug.scene}
+                object={bookShelf.scene}
                 position={[3,0 ,2]}
-                scale={5}
+                scale={0.5}
                 >
-
+                    <Html>
+                        <h1>Hello</h1>
+                    </Html>
                 </primitive>
 
+                </Float>
+                </PresentationControls>
             <PresentationControls 
             global
             rotation={[0.13, 0.3, 0]} 
@@ -54,6 +68,7 @@ const Landing = () => {
             position={[0, 1.56,- 1.4]}
             rotation-x={-0.256}
             >
+         
                 <iframe src="https://joseparra28.github.io/Runway-models-2/"/>
             </Html>
             </primitive>

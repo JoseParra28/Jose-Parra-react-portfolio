@@ -1,10 +1,10 @@
 /* Nav */
 
 .nav {
-  display: none;
+  /* display: none; */
   height: 96vh;
   width: 380px;
-  background-color: red;
+  background-color: rgb(105, 104, 104);
   position: absolute;
   z-index: 3;
   resize: both;

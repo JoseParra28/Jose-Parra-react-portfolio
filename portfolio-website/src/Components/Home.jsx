@@ -13,17 +13,29 @@ const Landing = () => {
     const phone = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/iphone-x/model.gltf')
     
     return (
+        <>
         <Canvas>
             <Environment preset="city"/>
             <color args={['#6b6969']} attach="background"/>
             
          <mesh>
-
+        
+       
+        
+            
+        <PresentationControls>
+            <Float>
             <primitive
             object={phone.scene}
+            position={[-5,-1,-1]}
+            rotation={[0.10, 0.3, 0]} 
+            scale={1}
             >
                 
             </primitive>
+            </Float>
+        </PresentationControls>
+          
            
                 <PresentationControls>
                 <Float>
@@ -78,15 +90,31 @@ const Landing = () => {
             <ContactShadows 
             position-y={-1.4}
             opacity={0.4}
-            scale={10}
-            blur={2.4}
+            scale={20}
+            blur={1}
             />
         </mesh>
 
        
         </Canvas>
+        <Canvas>
+        <mesh 
+        position-y={-1}
+        rotation-x={- Math.PI * 0.5}
+        scale={10}
+         >
 
+            
+        <planeGeometry />
+        <meshBasicMaterial color={'#6b6969'}/>
         
+        </mesh>
+        <mesh>
+      <sphereGeometry/>
+        </mesh>
+        </Canvas>
+
+        </>
     )
 }
 

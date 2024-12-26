@@ -1,13 +1,13 @@
 import './App.css'
-import Landing from './Components/Home'
+// import {Landing }from './Components/Home'
+import Navbar from './Components/Navbar'
 
 
 function App() {
 
   return (
     <>
-    
-   <Landing/>
+    <Navbar/>
     </>
   )
 }

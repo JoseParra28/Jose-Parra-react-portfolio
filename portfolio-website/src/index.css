@@ -3,11 +3,20 @@ html {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #241a1a;
+  background-color: #6b6969;
 }
 canvas {
   height: 100vh;
   width: 100%;
   margin: 0;
   padding: 0;
+  touch-action: none;
+}
+.htmlScreen iframe {
+width: 1024px;
+height: 670px;
+border: none;
+border-radius: 1px;
+background-color: black;
+color: rgb(173, 18, 18);
 }

@@ -12,6 +12,14 @@ canvas {
   padding: 0;
   touch-action: none;
 }
+@media screen and (max-width:950px){
+canvas{
+  height: 60vh;
+  touch-action: none;
+}
+}
+
+
 .htmlScreen iframe {
 width: 1024px;
 height: 670px;

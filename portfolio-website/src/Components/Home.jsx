@@ -17,6 +17,13 @@ const Landing = () => {
             {/* <torusGeometry />
             <meshBasicMaterial color={"green"}/> */}
 
+                <primitive 
+                object={mug.scene}
+                position={[3,0 ,2]}
+                scale={5}
+                >
+
+                </primitive>
 
             <PresentationControls 
             global

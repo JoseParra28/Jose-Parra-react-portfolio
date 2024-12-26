@@ -113,7 +113,9 @@ const Landing = () => {
       <sphereGeometry/>
         </mesh>
         </Canvas>
-
+        <div id="/home">
+            <h1>Hello there</h1>
+        </div>
         </>
     )
 }

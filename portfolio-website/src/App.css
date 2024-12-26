@@ -1,7 +1,37 @@
 /* Nav */
 
-.Sidebar {
+.nav {
+  display: none;
   height: 96vh;
   width: 380px;
   background-color: red;
+  position: absolute;
+  z-index: 3;
+  resize: both;
+  right: 0%;
+}
+.nav, ul, li, a{
+  text-align: end;
+  text-decoration: none;
+  list-style: none;
+}
+nav a {
+  text-decoration: none;
+  font-size: 2rem;
+}
+.navbar-logo {
+  display: flex;
+  justify-content: space-around;
+/* padding: 30px;
+padding-right: 60px; */
+
+}
+ul {
+  padding: 30px;
+}
+li {
+  padding: 20px;
+}
+.social-media {
+  display: flex;
 }

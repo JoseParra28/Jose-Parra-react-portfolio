@@ -13,7 +13,7 @@ const Hero = () => {
         roughness: {value: 0, min: 0, max:1, step: 0.1},
         transmission: {value: 1, min: 0, max:1, step: 0.01},
         ior: {value: 1.2, min: 0, max:3, step: 0.01},
-        chromaticAberration: {value: 0.2, min: 0, max:1},
+        chromaticAberration: {value: 0.82, min: 0, max:1},
         backside: {value: true}
     })
 
@@ -34,11 +34,27 @@ const Hero = () => {
         <torusGeometry/>
         <MeshTransmissionMaterial {...materialProps} />
         <meshBasicMaterial color={'#6b6969'} />
-        
         </mesh>
-        
         </Float>
         </PresentationControls>
+
+        <PresentationControls>
+            <Float>
+            <mesh>
+        <primitive
+            object={bunny.scene}
+            position={[5,-1,-1]}
+            rotation={[0.10, 0.3, 0]} 
+            scale={1}
+            
+            >
+                 <MeshTransmissionMaterial {...materialProps} />
+            </primitive>
+        </mesh>
+            </Float>
+        </PresentationControls>
+       
+        
         </Canvas>
       
         

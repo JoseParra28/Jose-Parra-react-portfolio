@@ -6,8 +6,6 @@ import { useControls } from 'leva'
 
 const Hero = () => {
 
-    const bunny = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/bunny/model.gltf')
-   
     const materialProps = useControls({
         thickness: {value: 0.2, min: 0, max:3, step: 0.05},
         roughness: {value: 0, min: 0, max:1, step: 0.1},
@@ -16,48 +14,69 @@ const Hero = () => {
         chromaticAberration: {value: 0.82, min: 0, max:1},
         backside: {value: true}
     })
+    const Sphere = ({position, size, color}) => {
+        const ref = useRef()
+    
+        useFrame((state, delta) => {
+            // ref.current.rotation.x += delta * 3
+            ref.current.rotation.y += delta 
+            // ref.current.position.z = Math.sin(state.clock.elapsedTime * 2)
+        })
+        return (
+            <mesh position={position} ref={ref}> 
+                <torusGeometry args={size}/>
+                <MeshTransmissionMaterial {...materialProps} />
+                <meshStandardMaterial color={color}  />
+            </mesh>
+        )
+    }
+    const Torus = ({position, size, color}) => {
+        const ref = useRef()
+    
+        useFrame((state, delta) => {
+            ref.current.rotation.x += delta
+            ref.current.rotation.y += delta 
+            // ref.current.position.z = Math.sin(state.clock.elapsedTime * 2)
+        })
+        return (
+            <mesh position={position} ref={ref}> 
+                <torusGeometry args={size}/>
+                <MeshTransmissionMaterial {...materialProps} />
+                <meshStandardMaterial color={color}  />
+            </mesh>
+        )
+    }
 
-    return (
-        
-        <Canvas >
-            
+    const Scene = () => {
+        return (
+            <>
             <directionalLight intensity={3} position={0, 3, 2}/>
-            <Environment preset="city"/>
+            <Environment preset="night"/>
             <color args={['#040404']} attach="background"/>
-            <Text fontSize={0.95} font="" position={1, 0, -1}>
+            <Text fontSize={1.2} font="">
                 Hi, I'm Jose
             </Text>
-            <PresentationControls>
+            </>
+        )
+    }
+   
+  
+
+    return (
+        <Canvas className="hero-canvas" >
+           <Scene/>
+        <PresentationControls>
         <Float>
-          
-           <mesh> 
-        <torusGeometry/>
-        <MeshTransmissionMaterial {...materialProps} />
-        <meshBasicMaterial color={'#6b6969'} />
-        </mesh>
+        <Torus position={[4,0,0]} />
         </Float>
         </PresentationControls>
 
         <PresentationControls>
             <Float>
-            <mesh>
-        <primitive
-            object={bunny.scene}
-            position={[5,-1,-1]}
-            rotation={[0.10, 0.3, 0]} 
-            scale={1}
-            
-            >
-                 <MeshTransmissionMaterial {...materialProps} />
-            </primitive>
-        </mesh>
+            <Sphere position={-1, 2,-3}/>
             </Float>
         </PresentationControls>
-       
-        
         </Canvas>
-      
-        
     )
 }
 

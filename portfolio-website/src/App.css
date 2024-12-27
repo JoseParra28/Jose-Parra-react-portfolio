@@ -39,14 +39,19 @@ li {
 
 /* About */
 .container {
-  top: 20%;
+  top: 10%;
   left: 8%;
   z-index: 3;
   position: absolute;
   margin: 2%;
   width: 30%;
-  
+  padding: 1%;
+  border: 1px solid #96cf24;
 }
 .container p {
 font-size: 1rem;
+}
+
+.skills {
+  top: 50%;
 }

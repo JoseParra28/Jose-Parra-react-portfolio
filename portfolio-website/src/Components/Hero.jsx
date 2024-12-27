@@ -39,7 +39,7 @@ const Hero = () => {
             ref.current.rotation.x = offset * 5
             ref.current.rotation.y = offset * 5
             ref.current.rotation.z = offset * 5
-            ref.current.position.z = offset * 5.5
+            ref.current.position.z = offset * 5.7
             ref.current.position.x = offset * -0.1
             ref.current.position.y = offset * -0.1
         })
@@ -75,9 +75,9 @@ const Hero = () => {
             <ScrollControls>
            <Scene/>
         <PresentationControls>
-        <Float>
+        {/* <Float> */}
         <Torus position={[4,0,0]} />
-        </Float>
+        {/* </Float> */}
         </PresentationControls>
 
         <PresentationControls>

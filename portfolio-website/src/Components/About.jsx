@@ -13,7 +13,7 @@ const About = ()=>{
 
 
     return (
-        
+        <section>
         <Canvas className="about-canvas">
             <Environment preset="city"/>
             <color args={['#040404']} attach="background"/>   
@@ -66,6 +66,7 @@ const About = ()=>{
       />
             </mesh>
         </Canvas>
+        </section>
     )
 }
 

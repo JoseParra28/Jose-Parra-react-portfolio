@@ -7,6 +7,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 const AboutContent = () => {
     return(
         <>
+        <section>
         
         <div className="container">
             
@@ -56,7 +57,7 @@ const AboutContent = () => {
             </div>
         </div>
         </div>
-       
+        </section>
         </>
     )
 }

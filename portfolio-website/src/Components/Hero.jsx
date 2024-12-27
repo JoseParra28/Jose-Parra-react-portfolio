@@ -63,6 +63,7 @@ const Hero = () => {
   
 
     return (
+        <section>
         <Canvas className="hero-canvas" >
            <Scene/>
         <PresentationControls>
@@ -77,6 +78,7 @@ const Hero = () => {
             </Float>
         </PresentationControls>
         </Canvas>
+        </section>
     )
 }
 

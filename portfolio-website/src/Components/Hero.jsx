@@ -1,6 +1,6 @@
 import { Canvas, useFrame, useThree } from "@react-three/fiber"
 import React, { useRef } from "react"
-import {Html, ContactShadows, Environment, Float, PresentationControls,  useGLTF, Text, MeshTransmissionMaterial } from "@react-three/drei"
+import {Html, ContactShadows, Environment, Float, PresentationControls,  useGLTF, Text, MeshTransmissionMaterial, ScrollControls, useScroll } from "@react-three/drei"
 import { useControls } from 'leva'
 
 
@@ -32,12 +32,19 @@ const Hero = () => {
     }
     const Torus = ({position, size, color}) => {
         const ref = useRef()
-    
-        useFrame((state, delta) => {
-            ref.current.rotation.x += delta
-            ref.current.rotation.y += delta 
-            // ref.current.position.z = Math.sin(state.clock.elapsedTime * 2)
+        const data = useScroll()
+
+        useFrame ((state, delta) => {
+            const { offset } = data
+            ref.current.rotation.x = offset * 5
+            ref.current.rotation.y = offset * 5
+            ref.current.rotation.z = offset * 5
+            ref.current.position.z = offset * 3
+            ref.current.position.x = offset * -1
+            ref.current.position.y = offset * 1
         })
+    
+        
         return (
             <mesh position={position} ref={ref}> 
                 <torusGeometry args={size}/>
@@ -65,6 +72,7 @@ const Hero = () => {
     return (
         <section className="hero-section">
         <Canvas className="hero-canvas" >
+            <ScrollControls>
            <Scene/>
         <PresentationControls>
         <Float>
@@ -77,6 +85,7 @@ const Hero = () => {
             <Sphere position={-1, 2,-3}/>
             </Float>
         </PresentationControls>
+        </ScrollControls>
         </Canvas>
         </section>
     )

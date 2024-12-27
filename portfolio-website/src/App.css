@@ -47,7 +47,7 @@ h1, h2, h3 {
 
 /* About */
 
-.container {
+/* .container {
   top: 10%;
   left: 8%;
   z-index: 3;
@@ -59,7 +59,7 @@ h1, h2, h3 {
 }
 .container p {
 font-size: 1rem;
-}
+} */
 
 .skills {
   top: 50%;

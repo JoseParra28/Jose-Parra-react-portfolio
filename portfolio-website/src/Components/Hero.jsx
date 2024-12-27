@@ -63,7 +63,7 @@ const Hero = () => {
   
 
     return (
-        <section>
+        <section className="hero-section">
         <Canvas className="hero-canvas" >
            <Scene/>
         <PresentationControls>

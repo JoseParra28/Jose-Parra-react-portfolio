@@ -10,8 +10,9 @@ function App() {
 
   return (
     <>
+    
     <AboutContent/>
-     <About/>
+
     </>
   )
 }

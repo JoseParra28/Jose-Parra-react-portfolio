@@ -7,6 +7,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 const AboutContent = () => {
     return(
         <>
+        <div className="info-div">
         <div className="container">
             
         <h1>Intoduction</h1>
@@ -28,6 +29,7 @@ const AboutContent = () => {
         create efficient, scalable, and user-friendly solutions that solve
         real-world problems. Let's work together to bring your ideas to life!
       </p>
+        </div>
         </div>
         </>
     )

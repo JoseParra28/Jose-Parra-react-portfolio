@@ -39,6 +39,10 @@ li {
 .social-media {
   display: flex;
 }
+h1, h2, h3 {
+  filter: blur(1px);
+}
+
 
 
 /* About */

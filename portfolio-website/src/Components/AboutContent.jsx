@@ -20,8 +20,10 @@ const AboutContent = () => {
       </p>
         </div>
         <div className="container skills">
-            
+        <div className="blur-bg">
         <h1>Skills</h1>
+        </div>
+        
 
         <div className="progress">
             <div className="progress-bar webgl" >

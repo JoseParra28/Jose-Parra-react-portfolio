@@ -18,13 +18,13 @@ const Hero = () => {
         const ref = useRef()
     
         useFrame((state, delta) => {
-            // ref.current.rotation.x += delta * 3
-            ref.current.rotation.y += delta 
+            ref.current.rotation.x += delta 
+            // ref.current.rotation.y += delta 
             // ref.current.position.z = Math.sin(state.clock.elapsedTime * 2)
         })
         return (
             <mesh position={position} ref={ref}> 
-                <torusGeometry args={size}/>
+                <boxGeometry args={[1.4, 1.4, 1.4]}/>
                 <MeshTransmissionMaterial {...materialProps} />
                 <meshStandardMaterial color={color}  />
             </mesh>
@@ -47,7 +47,8 @@ const Hero = () => {
         
         return (
             <mesh position={position} ref={ref}> 
-                <torusGeometry args={size}/>
+                {/* <torusGeometry args={size}/> */}
+                <boxGeometry args={[2,2,2]}/>
                 <MeshTransmissionMaterial {...materialProps} />
                 <meshStandardMaterial color={color}  />
             </mesh>
@@ -60,7 +61,7 @@ const Hero = () => {
             <directionalLight intensity={3} position={0, 3, 2}/>
             <Environment preset="night"/>
             <color args={['#040404']} attach="background"/>
-            <Text fontSize={1.2} font="">
+            <Text fontSize={1.2} font="" color={'#96cf24'}>
                 Hi, I'm Jose
             </Text>
             </>
@@ -85,8 +86,10 @@ const Hero = () => {
             <Sphere position={-1, 2,-3}/>
             </Float>
         </PresentationControls>
+       
         </ScrollControls>
         </Canvas>
+        
         </section>
     )
 }

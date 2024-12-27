@@ -7,10 +7,10 @@ import { fadeIn, textVariant } from "../utils/motion";
 const AboutContent = () => {
     return(
         <>
-        <div className="info-div">
+        
         <div className="container">
             
-        <h1>Intoduction</h1>
+        <h1>Introduction</h1>
         <p variants={fadeIn("", "", 0.1, 1)}>
         I'm a skilled software developer with experience in TypeScript and
         JavaScript, and expertise in frameworks like React, Node.js, and
@@ -22,15 +22,39 @@ const AboutContent = () => {
         <div className="container skills">
             
         <h1>Skills</h1>
-        <p variants={fadeIn("", "", 0.1, 1)}>
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
-      </p>
+
+        <div className="progress">
+            <div className="progress-bar webgl" >
+            <p>WebGL</p>
+            </div>
+        </div>
+        <div className="progress">
+            <div className="progress-bar reactjs" >
+            <p>ReactJS</p>
+            </div>
+        </div>
+        <div className="progress">
+            <div className="progress-bar js" >
+            <p>Javascript</p>
+            </div>
+        </div>
+        <div className="progress">
+            <div className="progress-bar HC" >
+            <p>HTML + CSS</p>
+            </div>
+        </div>
+        <div className="progress">
+            <div className="progress-bar threed" >
+            <p>Blender</p>
+            </div>
+        </div>
+        <div className="progress">
+            <div className="progress-bar python" >
+            <p>Python</p>
+            </div>
         </div>
         </div>
+       
         </>
     )
 }

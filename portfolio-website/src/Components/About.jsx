@@ -16,16 +16,7 @@ const About = ()=>{
         
         <Canvas className="about-canvas">
             <Environment preset="city"/>
-            <color args={['#040404']} attach="background"/>
-        <Html
-         transform
-         scale={1}
-        >
-            <motion.div variants={textVariant()}>
-                <h1>Intoduction</h1>
-            </motion.div>
-        
-      </Html>
+            <color args={['#040404']} attach="background"/>   
             <mesh >
             
       <PresentationControls 

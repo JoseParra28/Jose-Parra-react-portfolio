@@ -38,7 +38,15 @@ li {
 
 
 /* About */
-
-h1 {
-  color: #aacf24;
+.container {
+  top: 20%;
+  left: 8%;
+  z-index: 3;
+  position: absolute;
+  margin: 2%;
+  width: 30%;
+  
+}
+.container p {
+font-size: 1rem;
 }

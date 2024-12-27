@@ -35,3 +35,10 @@ li {
 .social-media {
   display: flex;
 }
+
+
+/* About */
+
+h1 {
+  color: #aba6a6;
+}

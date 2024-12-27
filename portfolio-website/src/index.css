@@ -5,6 +5,8 @@ html {
   padding: 0%;
   background-color: #040404;
   scroll-behavior: smooth;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #96cf24;
   
 }
 canvas {

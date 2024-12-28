@@ -7,7 +7,7 @@ const Navbar = () => {
     
 
     return (
-       <nav className='nav'>
+       <nav className="nav">
         <div className="navbar-logo">
         <div className="drop" id="show-menu">&equiv;</div>
                 <a href="/">Logo</a>

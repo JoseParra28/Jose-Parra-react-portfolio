@@ -1,3 +1,4 @@
+
 html {
   height: 100vh;
   width: 100%;
@@ -8,6 +9,20 @@ html {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #96cf24;
   
+}
+.main-div {
+  position: relative;
+  
+}
+.second-div {
+  background-repeat: no-repeat;
+  background-position: cover;
+  position: relative;
+}
+.third-div{
+  background-repeat: no-repeat;
+  background-position: cover;
+  position: relative;
 }
 section {
   height: 100vh;

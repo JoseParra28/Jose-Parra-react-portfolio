@@ -28,7 +28,16 @@ nav a {
   justify-content: space-around;
 /* padding: 30px;
 padding-right: 60px; */
+}
+#toggle {
+  font-family: 2rem;
+}
+.active {
+  color: white;
 
+}
+.unactive {
+  color: #96cf24;
 }
 ul {
   padding: 30px;

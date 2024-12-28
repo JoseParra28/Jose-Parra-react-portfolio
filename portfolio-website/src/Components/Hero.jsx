@@ -16,12 +16,23 @@ const Hero = () => {
     })
     const Sphere = ({position, size, color}) => {
         const ref = useRef()
+        const data = useScroll()
+
+        useFrame ((state, delta) => {
+            const { offset } = data
+            // ref.current.rotation.x = offset * 5
+            ref.current.rotation.y = offset * 5
+            // ref.current.rotation.z = offset * 5
+            // ref.current.position.z = offset * 5.7
+            // ref.current.position.x = offset * -0.1
+            // ref.current.position.y = offset * -0.1
+        })
     
-        useFrame((state, delta) => {
-            ref.current.rotation.x += delta 
+        // useFrame((state, delta) => {
+        //     ref.current.rotation.x += delta 
             // ref.current.rotation.y += delta 
             // ref.current.position.z = Math.sin(state.clock.elapsedTime * 2)
-        })
+        // })
         return (
             <mesh position={position} ref={ref}> 
                 <boxGeometry args={[1.4, 1.4, 1.4]}/>
@@ -61,9 +72,6 @@ const Hero = () => {
             <directionalLight intensity={3} position={0, 3, 2}/>
             <Environment preset="night"/>
             <color args={['#040404']} attach="background"/>
-            <Text fontSize={1.2} font="" color={'#96cf24'}>
-                Hi, I'm Jose
-            </Text>
             </>
         )
     }
@@ -71,7 +79,7 @@ const Hero = () => {
   
 
     return (
-        <section className="hero-section">
+        
         <Canvas className="hero-canvas" >
             <ScrollControls>
            <Scene/>
@@ -86,11 +94,17 @@ const Hero = () => {
             <Sphere position={-1, 2,-3}/>
             </Float>
         </PresentationControls>
+
+        <PresentationControls>
+            <Float>
+            <Sphere position={-1, 2, 1}/>
+            </Float>
+        </PresentationControls>
        
         </ScrollControls>
         </Canvas>
         
-        </section>
+
     )
 }
 

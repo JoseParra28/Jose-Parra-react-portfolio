@@ -1,3 +1,8 @@
+:root {
+  --font-color: #96cf24;
+  --font-white: #ffffff;
+  --background: #040404;
+}
 
 html {
   height: 100vh;
@@ -7,11 +12,19 @@ html {
   background-color: #040404;
   scroll-behavior: smooth;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: #96cf24;
+  color:var(--font-color);
   
 }
-.main-div {
-  position: relative;
+button {
+  padding: 15px;
+  border: solid 1px #96cf24;
+  background-color: var(--background);
+  color: var(--font-color) ;
+  font-size: 1rem;
+}
+button:hover {
+  background-color: var(--font-color);
+  color: var(--background);
 }
 
 section {
@@ -42,8 +55,6 @@ canvas{
   touch-action: none;
 }
 }
-
-
 .htmlScreen iframe {
 width: 1024px;
 height: 670px;

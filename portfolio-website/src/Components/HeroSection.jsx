@@ -4,6 +4,7 @@ import {Html, ContactShadows, Environment, Float, PresentationControls,  useGLTF
 import { useControls } from 'leva'
 import {motion} from 'framer-motion'
 import { Scroll } from "./Scroll"
+import Hero from "./Hero"
 
 export const HeroSection = () => {
     return (
@@ -16,7 +17,7 @@ export const HeroSection = () => {
                 </div>
                 
             </div>
-            <Scroll/>
+            <Hero/>
         </section>
     )
 }

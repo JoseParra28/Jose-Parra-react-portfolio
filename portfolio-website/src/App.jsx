@@ -7,6 +7,7 @@ import About from './Components/About'
 import AboutContent from './Components/AboutContent'
 import { Scroll } from './Components/Scroll'
 import { Nav } from './Components/Nav'
+import { HeroSection } from './Components/HeroSection';
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
     <>
      <div className="main-div">
         <div className="second-div">
-        <Nav/>
+        <HeroSection/>
+        {/* <Scroll/> */}
         </div>
         About
         skills

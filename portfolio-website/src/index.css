@@ -12,24 +12,16 @@ html {
 }
 .main-div {
   position: relative;
-  
 }
-.second-div {
-  background-repeat: no-repeat;
-  background-position: cover;
-  position: relative;
-}
-.third-div{
-  background-repeat: no-repeat;
-  background-position: cover;
-  position: relative;
-}
+
 section {
   height: 100vh;
-  background-color: red;
+  position: relative;
+  max-width: auto;
 }
 .hero-section {
   position: relative;
+  z-index: 2;
 }
 canvas {
   height: 100vh;
@@ -37,7 +29,7 @@ canvas {
   margin: 0;
   padding: 0;
   touch-action: none;
-  position: relative;
+  /* position: relative; */
 
 }
 iframe {

@@ -34,7 +34,7 @@ const Cube = ({position, size, color}) => {
 export const Scroll = () => {
 
     return (
-    <div>
+  
     <Canvas className="hero-canvas" >
         <ScrollControls pages={5}>
         <OrbitControls enableZoom={false}/>
@@ -43,7 +43,7 @@ export const Scroll = () => {
         <Cube />
         </ScrollControls>
      </Canvas>
-     </div>
+   
        
     )
 }
